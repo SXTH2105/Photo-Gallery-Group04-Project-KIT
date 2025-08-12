@@ -100,10 +100,10 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 .image-grid {
-    max-width: 600px; /* keeps the grid centered and narrow */
-    margin: 0 auto; /* centers the whole grid */
+    max-width: 600px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 photos per row */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 

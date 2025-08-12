@@ -100,10 +100,10 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 .image-grid {
-    padding-left: 500px ;
-    padding-right: 500px;
+    max-width: 600px; /* keeps the grid centered and narrow */
+    margin: 0 auto; /* centers the whole grid */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* 2 photos per row */
     gap: 1.5rem;
 }
 
@@ -113,10 +113,6 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     padding: 0.8rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
-}
-
-.image-grid figure:hover {
-    transform: scale(1.03);
 }
 
 .image-grid img {

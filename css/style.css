@@ -1,0 +1,196 @@
+/* all style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background: #fdfdfd;
+    color: #1c1c1e;
+    line-height: 1.6;
+}
+
+/* Navi bar */
+header {
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 300px #ff9500;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+    padding: 0.8rem 2rem;
+}
+
+nav a {
+    color: #1c1c1e;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9500;
+}
+
+.sign-in a {
+    background: #ff9500;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 12px;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+}
+
+/* section*/
+section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+/* upload */
+#upload {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+input[type="file"], input[type="submit"], input[type="reset"] {
+    margin-top: 1rem;
+}
+
+input[type="submit"], input[type="reset"] {
+    background: #ff9500;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0.5rem;
+    transition: 0.3s ease;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background: #e07e00;
+}
+
+/* imgage */
+#image h2 {
+    margin-bottom: 1rem;
+    color: #ff9500;
+}
+
+#image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 0.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+#image img:hover {
+    transform: scale(1.05);
+}
+
+/* contact */
+#contact {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+#contact-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contact-info i {
+    color: #ff9500;
+    margin-right: 0.5rem;
+}
+
+.social-link a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: #ff9500;
+    transition: color 0.3s ease;
+}
+
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    outline: none;
+}
+
+#contact-form button {
+    background: #ff9500;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+}
+
+#contact-form button:hover {
+    background: #e07e00;
+}
+
+/* footer */
+footer {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#footer-link a {
+    color: #1c1c1e;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#footer-link a:hover {
+    color: #ff9500;
+}
+
+.footer-copyright {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #6e6e73;
+}

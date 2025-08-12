@@ -122,6 +122,10 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     border-radius: 12px;
 }
 
+.image-grid figure:hover {
+    transform: scale(1.03);
+}
+
 .image-grid figcaption {
     margin-top: 0.5rem;
     font-size: 0.95rem;

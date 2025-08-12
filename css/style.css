@@ -1,8 +1,9 @@
-/* all style */
+/* general*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,15 +13,16 @@ body {
     line-height: 1.6;
 }
 
-/* Navi bar */
+/* navbar */
 header {
     top: 0;
+    position: sticky;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.65);
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 1px 300px #ff9500;
+    box-shadow: 0 1px 300px #aaaaaa;
 }
 
 nav {
@@ -58,7 +60,7 @@ section {
     text-align: center;
 }
 
-/* upload */
+/* upload*/
 #upload {
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -91,24 +93,44 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     background: #e07e00;
 }
 
-/* imgage */
-#image h2 {
-    margin-bottom: 1rem;
+/* photo*/
+#gallery h2 {
     color: #ff9500;
+    margin-bottom: 1rem;
 }
 
-#image img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+.image-grid {
+    padding-left: 500px ;
+    padding-right: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.image-grid figure {
+    background: rgba(255, 255, 255, 0.65);
     border-radius: 15px;
-    margin: 0.5rem;
+    padding: 0.8rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
-#image img:hover {
-    transform: scale(1.05);
+.image-grid figure:hover {
+    transform: scale(1.03);
+}
+
+.image-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image-grid figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1c1c1e;
 }
 
 /* contact */
@@ -140,7 +162,6 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     color: #ff9500;
     transition: color 0.3s ease;
 }
-
 
 #contact-form input, #contact-form textarea {
     width: 100%;
@@ -193,4 +214,35 @@ footer {
     margin-top: 1rem;
     font-size: 0.85rem;
     color: #6e6e73;
+}
+
+/* detail for each photo*/
+.photo-detail {
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.large-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1rem;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background: #ff9500;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+}
+
+.back-btn:hover {
+    background: #e07e00;
 }

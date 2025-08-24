@@ -8,9 +8,12 @@
 
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
-    background: #fdfdfd;
+    background-image: url('../img/bg-image.png');
+    background-size: cover;
+    background-attachment: fixed;
     color: #1c1c1e;
     line-height: 1.6;
+    overflow: auto;    /* overflow auto display scrollbar when needed while overflow scroll display scrollbar always */
 }
 
 /* navbar */
@@ -19,8 +22,8 @@ header {
     position: sticky;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 1px 300px #aaaaaa;
 }
@@ -42,16 +45,18 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff9500;
+    color: #00B14F;
+    text-decoration: underline;
 }
 
 .sign-in a {
-    background: #ff9500;
-    color: white;
+    background: #00B14F;
+    color: rgb(0, 0, 0);
     padding: 0.4rem 1rem;
+    /* border-style: groove; */
     border-radius: 12px;
     font-weight: 500;
-    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(10, 170, 63, 0.3);
 }
 
 /* section*/
@@ -62,41 +67,48 @@ section {
 
 /* upload*/
 #upload {
+    /* outline-style:groove; */
+    outline-color: #00B14F;
     background: rgba(255, 255, 255, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* border-style: groove; */
     border-radius: 20px;
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
     max-width: 600px;
     margin: 2rem auto;
     padding: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 32px rgba(48, 218, 5, 0.08);
 }
 
 input[type="file"], input[type="submit"], input[type="reset"] {
     margin-top: 1rem;
 }
 
-input[type="submit"], input[type="reset"] {
-    background: #ff9500;
-    color: white;
-    border: none;
+input[type="submit"], input[type="reset"], input[type="file"]  {
+    background: #00B14F;
+    border-style: groove;
+    color: rgb(0, 0, 0);
     padding: 0.5rem 1.2rem;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: 500;
     margin: 0.5rem;
     transition: 0.3s ease;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
-    background: #e07e00;
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="file"]:hover {
+    background: #00B14F;
 }
 
 /* photo*/
 #gallery h2 {
-    color: #ff9500;
+    background-color: #00B14F;
+    display: inline-block;
+    border-radius: 10px;
+    border-style: none;
+    color:white;
     margin-bottom: 1rem;
+    padding: 2px 10px;
 }
 
 .image-grid {
@@ -105,6 +117,7 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    float: none;
 }
 
 .image-grid figure {
@@ -152,14 +165,14 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 #contact-info i {
-    color: #ff9500;
+    color: #00B14F;
     margin-right: 0.5rem;
 }
 
 .social-link a {
     margin: 0 0.5rem;
     font-size: 1.5rem;
-    color: #ff9500;
+    color: #00B14F;
     transition: color 0.3s ease;
 }
 
@@ -174,7 +187,7 @@ input[type="submit"]:hover, input[type="reset"]:hover {
 }
 
 #contact-form button {
-    background: #ff9500;
+    background: #00B14F;
     color: white;
     padding: 0.6rem 1.5rem;
     border: none;
@@ -182,11 +195,11 @@ input[type="submit"]:hover, input[type="reset"]:hover {
     cursor: pointer;
     font-weight: 500;
     margin-top: 1rem;
-    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(10, 170, 63, 0.3);
 }
 
 #contact-form button:hover {
-    background: #e07e00;
+    background: #00B14F;
 }
 
 /* footer */
@@ -196,7 +209,8 @@ footer {
     -webkit-backdrop-filter: blur(18px);
     padding: 1.5rem 2rem;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(10, 170, 63, 0.3);
+;
 }
 
 #footer-link a {
@@ -207,7 +221,7 @@ footer {
 }
 
 #footer-link a:hover {
-    color: #ff9500;
+    color: #00B14F;
 }
 
 .footer-copyright {
@@ -234,15 +248,16 @@ footer {
 .back-btn {
     display: inline-block;
     margin-top: 1rem;
-    background: #ff9500;
+    background: #00B14F;
     color: white;
     padding: 0.6rem 1.2rem;
     border-radius: 10px;
     text-decoration: none;
     font-weight: 500;
-    box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(10, 170, 63, 0.3);
+;
 }
 
 .back-btn:hover {
-    background: #e07e00;
+    background: #00B14F;
 }
